@@ -1,0 +1,14 @@
+{
+	"UrlPathes": {
+		"Api": "https://localhost:5001/",
+		"Site": "https://localhost:8080"
+	},
+	"maxFileSize": "20000000",
+	"ViewOptions": {
+		"CountBuildInPage": "6",
+		"CountCommentsInPage": "3"
+	},
+	"CacheOptions": {
+		"PolicyName" : "always"
+	}
+}
