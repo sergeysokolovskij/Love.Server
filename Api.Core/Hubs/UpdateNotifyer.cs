@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ShopPlatforms.Core.Hubs
 {
-	public class Messanger : Hub
+	public class Updater : Hub
 	{
 	}
 }

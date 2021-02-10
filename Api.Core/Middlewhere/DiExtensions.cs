@@ -12,7 +12,7 @@ namespace ShopPlatform.Middlewhere
 		public static void RegisterMiddleWheres(this IApplicationBuilder appBuilder)
 		{
 			appBuilder.UseMiddleware<XssProtectionMiddlewhere>();
-			appBuilder.UseMiddleware<ShopPlatformExceptionMiddlewhere>();
+			appBuilder.UseMiddleware<ExceptionMiddlewhere>();
 		}
 	}
 }

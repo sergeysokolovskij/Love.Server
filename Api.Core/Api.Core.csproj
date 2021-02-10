@@ -10,10 +10,15 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.1.0" />
+    <PackageReference Include="Twilio" Version="5.52.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Api.Services\Api.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\Accounting\" />
   </ItemGroup>
 
 </Project>

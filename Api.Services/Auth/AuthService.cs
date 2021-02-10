@@ -18,6 +18,8 @@ using Shared;
 using Api.Services.Exceptions;
 using Api.Providers;
 using Api.Models.Options;
+using Api.Dal.Dev;
+using System.Collections.Generic;
 
 namespace Api.Services.Authentication
 {
@@ -26,8 +28,7 @@ namespace Api.Services.Authentication
 		Task<AuthResult> AuthorizeByPasswordAsync(
 			string userName,
 			string password,
-			string fingerPrint,
-			string newLongSessionValue,
+			string longSessionValue,
 			string userAgent
 		);
 		Task<AuthResult> RegisterAsync(
@@ -37,6 +38,8 @@ namespace Api.Services.Authentication
 			string fingerPrint,
 			string longSession
 		);
+		Task RegisterTestUsersAsync(User user, string password);
+		Task<bool> IsUserExistAsync(UserAccount user);
 		Task<AuthResult> UpdateLongSessionAsync(
 			string longSession, 
 			string fingerPrint,
@@ -104,7 +107,7 @@ namespace Api.Services.Authentication
 			string longSession)
 		{
 			var isSignIn = await signInManager.PasswordSignInAsync(userName, password, false, false);
-
+			
 			if (isSignIn.Succeeded)
 				throw new ApiError(new ServerException("Пользователь с таким логином уже зарегистрирован"));
 
@@ -115,7 +118,7 @@ namespace Api.Services.Authentication
 			};
 
 			bool isNeedConfirmEmail = emailSenderService.IsNeedConfirm();
-
+			
 			if (isNeedConfirmEmail)
 			{
 				var isEmailUnique = await userManager.Users.FirstOrDefaultAsync(x => x.Email == email);
@@ -145,15 +148,15 @@ namespace Api.Services.Authentication
 
 			if (isNeedConfirmEmail)
 			{
-				string emailToken = jwtService.GenereteEmailToken(registeredUser);
+				string emailToken = await jwtService.GenereteEmailToken(registeredUser);
 				await emailSenderService.SendEmailAsync(new AuthMailInfo(emailToken), registeredUser.Email, MailTempleteNames.AuthMailTemplateName);
 			}
-
+			List<string> roles = new List<string>() { role.Name };
 			return new AuthResult()
 			{
 				UserName = userName,
-				Role = role.Name,
-				AccessToken = jwtService.GenereteJwtToken(userName, registeredUser, role.Name),
+				Roles = roles,
+				AccessToken = jwtService.GenereteJwtToken(userName, registeredUser, new List<string>() { role.Name}),
 				RefreshToken = longSession
 			};
 		}
@@ -161,8 +164,7 @@ namespace Api.Services.Authentication
 		public async Task<AuthResult> AuthorizeByPasswordAsync(
 			string userName,
 			string password,
-			string fingerPrint,
-			string newLongSessionValue,
+			string longSessionValue,
 			string userAgent)
 		{
 			var result = await signInManager.PasswordSignInAsync(userName, password, false, false);
@@ -176,25 +178,33 @@ namespace Api.Services.Authentication
 				if (!appUser.EmailConfirmed)
 					throw new ApiError(new ServerException("Почта не была подтверждена"));
 
-			string role = (await userManager.GetRolesAsync(appUser))[0];
+			var roles = await userManager.GetRolesAsync(appUser);
 
-			if (!context.Request.Cookies.TryGetValue(AuthConstants.LongSession, out string longSessionValue))
+			string newLongSessionValue = jwtService.GenerateRefreshToken();
+
+			if (string.IsNullOrEmpty(longSessionValue))
+			{
+				string fingerPrint = GetFingerPrint(userAgent, newLongSessionValue);
+
 				await userProvider.CreateLongSessionAsync(new LongSession()
 				{
 					UserId = appUser.Id,
 					FingerPrint = fingerPrint,
 					Value = newLongSessionValue
 				});
+			}
 			else
 			{
-				var newFingerPrint = GetFingerPrint(userAgent, newLongSessionValue);
-				await userProvider.UpdateLongSessionAsync(appUser.Id, longSessionValue, fingerPrint, newFingerPrint, newLongSessionValue);
+				string oldFingerPrint = GetFingerPrint(userAgent, longSessionValue);
+				string newFingerPrint = GetFingerPrint(userAgent, newLongSessionValue);
+
+				await userProvider.UpdateLongSessionAsync(appUser.Id, longSessionValue, oldFingerPrint, newFingerPrint, newLongSessionValue);
 			}
 			return (new AuthResult()
 			{
 				UserName = userName,
-				Role = role,
-				AccessToken = jwtService.GenereteJwtToken(userName, appUser, role),
+				Roles = roles.ToList(),
+				AccessToken = jwtService.GenereteJwtToken(userName, appUser, roles.ToList()),
 				RefreshToken = newLongSessionValue
 			});
 		}
@@ -218,13 +228,13 @@ namespace Api.Services.Authentication
 			if (!isOkey)
 				throw new ApiError(new ServerException("Несуществующий идентификатор longsession"));
 
-			string role = (await userManager.GetRolesAsync(user))[0];
+			var roles = (await userManager.GetRolesAsync(user)).ToList();
 
 			return new AuthResult()
 			{
 				UserName = user.UserName,
-				Role = role,
-				AccessToken = jwtService.GenereteJwtToken(user.UserName, user, role),
+				Roles = roles,
+				AccessToken = jwtService.GenereteJwtToken(user.UserName, user, roles),
 				RefreshToken = newLongSessionValue
 			};
 		}
@@ -234,7 +244,7 @@ namespace Api.Services.Authentication
 			string userId;
 			try
 			{
-				var tokenDecrypt = jwtService.DecryptEmailToken(token);
+				var tokenDecrypt = await jwtService.DecryptEmailToken(token);
 				var jweToken = new JwtSecurityToken(new JwtHeader(), JwtPayload.Deserialize(tokenDecrypt));
 
 				userId = jweToken.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value;
@@ -275,10 +285,24 @@ namespace Api.Services.Authentication
 		{
 			var print = new
 			{
-				UserAgent = userAgent,
+				UserAgent = userAgent,	
 				LongSession = longSessionValue
 			};
 			return Sha1.GetHash(JsonConvert.SerializeObject(print));
+		}
+
+		public async Task RegisterTestUsersAsync(User user, string password)
+		{
+			var createUser = await userManager.CreateAsync(user, password);
+			var role = await roleManager.Roles.FirstOrDefaultAsync(x => x.Name == "User");
+			await userManager.AddToRoleAsync(user, role.Name);
+		}
+
+		public async Task<bool> IsUserExistAsync(UserAccount user)
+		{
+			if (await userManager.Users.AnyAsync(x => x.UserName == user.Login))
+				return true;
+			return false;
 		}
 	}
 }

@@ -19,6 +19,7 @@ namespace Api.Models.Options
 			services.Configure<UrlPathOptions>(configuration.GetSection("UrlPathes"));
 			services.Configure<ViewOptions>(configuration.GetSection("ViewOptions"));
 			services.Configure<CacheOptions>(configuration.GetSection("CacheOptions"));
+			services.Configure<MessangerOptions>(configuration.GetSection("MessangerOptions"));
 		}
 	}
 }

@@ -1,0 +1,434 @@
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.exe
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.deps.json
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.runtimeconfig.json
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.runtimeconfig.dev.json
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.pdb
+C:\Users\User\source\repos\Api\Api\obj\Debug\netcoreapp3.1\Api.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Api\Api\obj\Debug\netcoreapp3.1\Api.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Api\Api\obj\Debug\netcoreapp3.1\Api.AssemblyInfo.cs
+C:\Users\User\source\repos\Api\Api\obj\Debug\netcoreapp3.1\Api.RazorTargetAssemblyInfo.cache
+C:\Users\User\source\repos\Api\Api\obj\Debug\netcoreapp3.1\staticwebassets\Api.StaticWebAssets.Manifest.cache
+C:\Users\User\source\repos\Api\Api\obj\Debug\netcoreapp3.1\staticwebassets\Api.StaticWebAssets.xml
+C:\Users\User\source\repos\Api\Api\obj\Debug\netcoreapp3.1\Api.dll
+C:\Users\User\source\repos\Api\Api\obj\Debug\netcoreapp3.1\Api.pdb
+C:\Users\User\source\repos\Api\Api\obj\Debug\netcoreapp3.1\Api.genruntimeconfig.cache
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.Core.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.Dal.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.Models.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.Provider.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.Services.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.Utils.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.Core.pdb
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.Dal.pdb
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.Models.pdb
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.Provider.pdb
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.Services.pdb
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Api.Utils.pdb
+C:\Users\User\source\repos\Api\Api\obj\Debug\netcoreapp3.1\Api.csproj.CopyComplete
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Configs\authConfig.json
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Configs\corsconfig.json
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Configs\dbconfig.Development.json
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Configs\dbconfig.Production.json
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Configs\globalConfig.json
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\User\source\repos\Api\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\User\source\repos\Api\Api\obj\Debug\netcoreapp3.1\Api.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Api\Api\obj\Debug\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\source\repos\Api\Api\obj\Debug\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cache
+D:\Рабочий стол\love\source\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.csprojAssemblyReference.cache
+D:\Рабочий стол\love\source\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.AssemblyInfoInputs.cache
+D:\Рабочий стол\love\source\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.AssemblyInfo.cs
+D:\Рабочий стол\love\source\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.dll
+D:\Рабочий стол\love\source\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.pdb
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Configs\authConfig.json
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Configs\corsconfig.json
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Configs\dbconfig.Development.json
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Configs\dbconfig.Production.json
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Configs\globalConfig.json
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.exe
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.deps.json
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.runtimeconfig.json
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.runtimeconfig.dev.json
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.pdb
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.Core.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.Dal.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.Models.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.Provider.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.Services.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.Utils.dll
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.Core.pdb
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.Dal.pdb
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.Models.pdb
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.Provider.pdb
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.Services.pdb
+D:\Рабочий стол\Seller\web\api\Api\bin\Debug\netcoreapp3.1\Api.Utils.pdb
+D:\Рабочий стол\Seller\web\api\Api\obj\Debug\netcoreapp3.1\Api.csprojAssemblyReference.cache
+D:\Рабочий стол\Seller\web\api\Api\obj\Debug\netcoreapp3.1\Api.AssemblyInfoInputs.cache
+D:\Рабочий стол\Seller\web\api\Api\obj\Debug\netcoreapp3.1\Api.AssemblyInfo.cs
+D:\Рабочий стол\Seller\web\api\Api\obj\Debug\netcoreapp3.1\Api.RazorTargetAssemblyInfo.cache
+D:\Рабочий стол\Seller\web\api\Api\obj\Debug\netcoreapp3.1\Api.csproj.CopyComplete
+D:\Рабочий стол\Seller\web\api\Api\obj\Debug\netcoreapp3.1\staticwebassets\Api.StaticWebAssets.Manifest.cache
+D:\Рабочий стол\Seller\web\api\Api\obj\Debug\netcoreapp3.1\staticwebassets\Api.StaticWebAssets.xml
+D:\Рабочий стол\Seller\web\api\Api\obj\Debug\netcoreapp3.1\Api.dll
+D:\Рабочий стол\Seller\web\api\Api\obj\Debug\netcoreapp3.1\Api.pdb
+D:\Рабочий стол\Seller\web\api\Api\obj\Debug\netcoreapp3.1\Api.genruntimeconfig.cache
+D:\Рабочий стол\Seller\web\api\Api\obj\Debug\netcoreapp3.1\Api.csproj.CoreCompileInputs.cache
+D:\Рабочий стол\Seller\web\api\Api\obj\Debug\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cs
+D:\Рабочий стол\Seller\web\api\Api\obj\Debug\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cache
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Configs\authConfig.json
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Configs\corsconfig.json
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Configs\dbconfig.Development.json
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Configs\dbconfig.Production.json
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Configs\globalConfig.json
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.exe
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.deps.json
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.runtimeconfig.json
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.runtimeconfig.dev.json
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.pdb
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Core.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Dal.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Models.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Provider.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Services.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Utils.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Core.pdb
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Dal.pdb
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Models.pdb
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Provider.pdb
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Services.pdb
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Utils.pdb
+D:\Рабочий стол\love\source\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.RazorTargetAssemblyInfo.cache
+D:\Рабочий стол\love\source\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.csproj.CopyComplete
+D:\Рабочий стол\love\source\Love.Server\Api\obj\Debug\netcoreapp3.1\staticwebassets\Api.StaticWebAssets.Manifest.cache
+D:\Рабочий стол\love\source\Love.Server\Api\obj\Debug\netcoreapp3.1\staticwebassets\Api.StaticWebAssets.xml
+D:\Рабочий стол\love\source\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.genruntimeconfig.cache
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Twilio.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Redis.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\StackExchange.Redis.StrongName.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Pipelines.Sockets.Unofficial.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\StackExchange.Redis.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Factories.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Factories.pdb
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\MessagePack.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\MessagePack.Annotations.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Connections.Abstractions.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.SignalR.Common.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.SignalR.Protocols.MessagePack.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
+D:\Рабочий стол\love\source\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.csproj.CoreCompileInputs.cache
+D:\Рабочий стол\love\source\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cs
+D:\Рабочий стол\love\source\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cache
+D:\Рабочий стол\love\source\Love.Server\Api\bin\Debug\netcoreapp3.1\Quartz.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Configs\authConfig.json
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Configs\corsconfig.json
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Configs\dbconfig.Development.json
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Configs\dbconfig.Production.json
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Configs\globalConfig.json
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.exe
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.deps.json
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.runtimeconfig.json
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.runtimeconfig.dev.json
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.pdb
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\MessagePack.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\MessagePack.Annotations.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Connections.Abstractions.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.SignalR.Common.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.SignalR.Protocols.MessagePack.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Redis.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Pipelines.Sockets.Unofficial.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Quartz.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\StackExchange.Redis.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\StackExchange.Redis.StrongName.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Twilio.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Core.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Dal.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Factories.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Models.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Provider.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Services.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Utils.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Core.pdb
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Dal.pdb
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Factories.pdb
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Models.pdb
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Provider.pdb
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Services.pdb
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Api.Utils.pdb
+D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.csprojAssemblyReference.cache
+D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.AssemblyInfoInputs.cache
+D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.AssemblyInfo.cs
+D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.csproj.CoreCompileInputs.cache
+D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cs
+D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cache
+D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\staticwebassets\Api.StaticWebAssets.Manifest.cache
+D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\staticwebassets\Api.StaticWebAssets.xml
+D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\scopedcss\bundle\Api.styles.css
+D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.RazorTargetAssemblyInfo.cache
+D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.csproj.CopyComplete
+D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.dll
+D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.pdb
+D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.genruntimeconfig.cache

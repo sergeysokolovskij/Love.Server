@@ -10,15 +10,17 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Api.DAL;
 using Api.Utils;
+using static Api.Services.Crypt.CypherConstants;
+using System.Threading.Tasks;
 
 namespace Api.Services.Auth
 {
 	public interface IJwtService
 	{
 		string GenerateRefreshToken();
-        string GenereteJwtToken(string userName, IdentityUser user, string role);
-        string GenereteEmailToken(User user);
-        string DecryptEmailToken(string token);
+        string GenereteJwtToken(string userName, IdentityUser user, List<string> roles);
+        Task<string> GenereteEmailToken(User user);
+		Task<string> DecryptEmailToken(string token);
     }
     
     //сервис предоставление JWT-токенов на основе JWE->токен не только подписывается сервером, но еще и шифруется. 
@@ -51,15 +53,18 @@ namespace Api.Services.Auth
             return CommonMethods.GenerateRandomString(32);
 		}
 
-        public string GenereteJwtToken(string userName, IdentityUser user, string role)
+        public string GenereteJwtToken(string userName, IdentityUser user, List<string> roles)
         {
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id),
-                new Claim(ClaimsIdentity.DefaultRoleClaimType, role),
                 new Claim(ClaimsIdentity.DefaultNameClaimType, userName),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(CommonConstants.UniqueClaimName, CryptoRandomizer.GetRandomString(16))
             };
+
+            foreach (string role in roles)
+                claims.Add(new Claim(ClaimsIdentity.DefaultRoleClaimType, role));
 
             var signInCreditials = new SigningCredentials(signInEncodingKey.GetKey(), 
                 signInEncodingKey.SignInAlgorithm);
@@ -85,25 +90,27 @@ namespace Api.Services.Auth
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        public string GenereteEmailToken(User user)
+        public async Task<string> GenereteEmailToken(User user)
         {
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                new Claim(JwtRegisteredClaimNames.Jti, CryptoRandomizer.GetRandomString(16))
+                new Claim(JwtRegisteredClaimNames.Jti, CryptoRandomizer.GetRandomString(16)),
             };
 
             var token = new JwtSecurityToken(
                 claims: claims,
                 expires: DateTime.Now.AddDays(TokenParameters.EmailTokenLifeTime));
 
-            return crypt.Crypt(CypherConstants.EmailCipherName, token.Payload.SerializeToJson());
+            var cryptedToken = await crypt.Crypt(EmailCypherNameId, token.Payload.SerializeToJson());
+            return cryptedToken;
         }
 
-        public string DecryptEmailToken(string token)
+
+        public async Task<string> DecryptEmailToken(string token)
 		{
-            var decryptToken = crypt.DecryptString(CypherConstants.EmailCipherName, token);
+            var decryptToken = await crypt.DecryptString(EmailCypherNameId, token);
             return decryptToken;
 		}
     }

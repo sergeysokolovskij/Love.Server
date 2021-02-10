@@ -21,9 +21,8 @@ namespace ShopPlatforms.Core.Controllers
 		private readonly IEmailSenderService emailSenderService;
 		private readonly IConfiguration configuration;
 		public RequestController(IServiceProvider serviceProvider, 
-			ICacheService cacheService,
 			IEmailSenderService emailSenderService,
-			IConfiguration configuration) : base(serviceProvider, cacheService)
+			IConfiguration configuration) : base(serviceProvider)
 		{
 			this.emailSenderService = emailSenderService;
 			this.configuration = configuration;
@@ -61,7 +60,7 @@ namespace ShopPlatforms.Core.Controllers
 					var fullPath = Path.Combine(directoryPath, string.Format("temp{0}{1}", count, photoType));
 					if (System.IO.File.Exists(fullPath))
 						System.IO.File.Delete(fullPath);
-					await using(var fileStream = new FileStream(fullPath, FileMode.Create))
+					await using (var fileStream = new FileStream(fullPath, FileMode.Create))
 					{
 						await file.CopyToAsync(fileStream);
 					}

@@ -1,7 +1,10 @@
-﻿using Api.Services.Cache;
-using Api.Services.Cache.CategoryTypes;
+﻿using Api.DAL;
+using Api.Providers;
+using Api.Services.Cache;
+using Api.Utils;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -10,19 +13,22 @@ namespace ShopPlatform.Controllers
 {
 	public class BaseController : Controller
 	{
-		protected readonly ICacheService cacheService;
 		protected readonly IServiceProvider serviceProvider;
+		protected readonly IUserProvider userProvider;
+
+		public BaseController(IServiceProvider serviceProvider,
+			IUserProvider userProvider)
+		{
+			this.serviceProvider = serviceProvider;
+			this.userProvider = userProvider;
+		}
 
 		public BaseController(IServiceProvider serviceProvider)
 		{
+			this.serviceProvider = serviceProvider;
 		}
 
-		public BaseController(IServiceProvider serviceProvider,
-			ICacheService cacheService)
-		{
-			this.serviceProvider = serviceProvider;
-			this.cacheService = cacheService;
-		}
+		
 
 		[NonAction]
 		public IActionResult JsonMessage(string message)
@@ -63,22 +69,15 @@ namespace ShopPlatform.Controllers
 			return StatusCode(201);
 		}
 
-		//Реализация кеш-логики здесь. Её нужно будет обдумать 
+		
+
 		[NonAction]
-		public async Task <IActionResult> CacheContentAsync<T>(
-			string cacheKey,
-			Func<Task<T>> dataLoader,
-			ITypeCache categoryCache)
+		public Task<User> GetUserAsync()
 		{
-			var result = cacheService.Get(cacheKey);
-			if (result == null)
-			{
-				result = await dataLoader();
-				cacheService.Set(cacheKey, result, categoryCache);
-			}
-			if (result == null)
-				return Ok();
-			return Json(result);
+			var allRoles = User.Claims.Where(x => x.Type == ClaimTypes.Role).Select(x => x.Value).ToList();
+			if (User.Identity != null && !string.IsNullOrEmpty(User.Identity.Name))
+				return userProvider.GetModelBySearchPredicate(x => x.UserName == User.Identity.Name);
+			return null;
 		}
 
 		public string ControllerName => ControllerContext.ActionDescriptor.ControllerName;
@@ -91,11 +90,20 @@ namespace ShopPlatform.Controllers
 				return User.Identity.Name;
 			}
 		}
-		public string RoleName
+
+		public List<string> RoleNames
 		{
 			get
 			{
-				return User.Claims.Where(x => x.Type == ClaimTypes.Role).Select(x => x.Value).FirstOrDefault();
+				return User.Claims.Where(x => x.Type == ClaimTypes.Role).Select(x => x.Value).ToList();
+			}
+		}
+
+		public string TokenId
+		{
+			get
+			{
+				return User.Claims.Where(x => x.Type == CommonConstants.UniqueClaimName).Select(x => x.Value).FirstOrDefault();
 			}
 		}
 	}

@@ -2,19 +2,34 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using Api.DAL;
 using Api.DAL.Base;
+using Api.Models.Messanger;
+using Api.Provider.Cache;
+using Api.Provider.Messanger;
+using Api.Providers;
+using Api.Services.Brocker;
+using Api.Services.Cache;
+using Api.Services.Cache.CacheServices;
+using Api.Services.Crypt;
+using Api.Services.Messanger;
+using Api.Utils;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using RabbitMQ.Client;
 
 namespace Api
 {
 	public class Program
 	{
-		public static void Main(string[] args)
+		public static async Task Main(string[] args)
 		{
 			IHostBuilder hostBuilder = CreateHostBuilder(args);
 
@@ -22,13 +37,13 @@ namespace Api
 
 			IHost host = null;
 
+			host = hostBuilder.Build();
+
+			var scope = host.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
+
 			try
 			{
-				host = hostBuilder.Build();
-
-				var scope = host.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
 				var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationContext>();
-
 
 				if (Configuration.IsConfigOkey)
 				{
@@ -38,7 +53,6 @@ namespace Api
 						try
 						{
 							dbContext.Migrate();
-							host.Run();
 						}
 						catch (Exception ex)
 						{
@@ -52,21 +66,26 @@ namespace Api
 				{
 					Console.WriteLine(Configuration.ErrorMessage);
 				}
-				dbContext.Dispose();
 			}
 			catch (Exception ex)
 			{
 				Console.WriteLine(ex.Message);
 			}
-		}
 
+			var brocker = scope.ServiceProvider.GetRequiredService<IBrockerService>();
+
+            brocker.SubscribeToQuee("sadsdadsa");
+
+            var subscriber = scope.ServiceProvider.GetRequiredService<ISubscriber>();
+			await subscriber.SetAllSubscribersAsync();
+			await host.RunAsync();
+		}
 		public static IHostBuilder CreateHostBuilder(string[] args)
 		{
 			return Host.CreateDefaultBuilder(args)
 				.ConfigureWebHostDefaults(webBuilder =>
 				{
 					webBuilder.UseStartup<Startup>();
-					webBuilder.UseUrls("");
 
 					webBuilder.ConfigureAppConfiguration((builderContext, config) =>
 					{
@@ -81,6 +100,13 @@ namespace Api
 						config.AddJsonFile(corsConfigFile);
 						config.AddJsonFile(globalConfigFile);
 					});
+				})
+				.ConfigureLogging((logger) => 
+				{
+					logger.AddConsole();
+					logger.SetMinimumLevel(LogLevel.Information);
+					logger.AddFilter("Microsoft.AspNetCore.SignalR", LogLevel.Debug);
+					logger.AddFilter("Microsoft.AspNetCore.Http.Connections", LogLevel.Debug);
 				});
 		}
 	}

@@ -17,20 +17,10 @@ namespace Api.Utils
 			return Convert.FromBase64String(input.Replace("-", "+").Replace("_", "/"));
 		}
 
-		public static string FromBytesToString(this byte[] input)
-		{
-			return Encoding.UTF8.GetString(input);
-		}
-
-		public static byte[] FromStringToBytes(this string input)
-		{
-			return Encoding.UTF8.GetBytes(input);
-		}
-
 		public static string ToBase64Url(this string input)
 		{
 			var readOnlyInput = input.AsMemory();
-			var writebleInput = Unsafe.As<ReadOnlyMemory<char>, Memory<Char>>(ref readOnlyInput);
+			var writebleInput = Unsafe.As<ReadOnlyMemory<char>, Memory<char>>(ref readOnlyInput);
 			foreach (ref var elem in writebleInput.Span)
 			{
 				if (elem == '-')

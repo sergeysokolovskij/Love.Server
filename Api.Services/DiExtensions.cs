@@ -4,6 +4,9 @@ using Api.Services.Crypt;
 using Api.Services.Auth;
 using Api.Services.Cache;
 using Api.Services.Email;
+using Api.Services.Messanger;
+using Api.Services.Brocker;
+using Api.Services.HubServices;
 
 namespace Api.Services
 {
@@ -15,6 +18,9 @@ namespace Api.Services
 			serviceCollection.AddAuthService();
 			serviceCollection.RegisterCacheServices();
 			serviceCollection.RegisterEmailServices();
+			serviceCollection.AddMessageServices();
+			serviceCollection.AddBrockerService();
+			serviceCollection.AddHubs();
 		} 
 	}
 }

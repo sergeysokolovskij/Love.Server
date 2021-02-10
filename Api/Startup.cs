@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Api.Core.HostedService;
+using Api.Core.Hubs.Messanger;
 using Api.Models.Options;
 using Api.Providers;
 using Api.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
@@ -38,16 +41,17 @@ namespace Api
 			services.Configure<CookiePolicyOptions>(options =>
 			{
 			});
-			services.AddCors();
-			//services.CorsConfiguration(Configuration);
+			services.CorsConfiguration(Configuration);
+
 			services.ConfigurAuthorization();
+			services.AddLocalization();
 
 			bool isDevelopment = Configuration["ASPNETCORE_ENVIRONMENT"] == "Development";
 
 			if (!isDevelopment)
-				//	services.ConfigureSecurity();
+				services.ConfigureSecurity();
 
-				services.ConfigurAuthentication(Configuration, isDevelopment);
+			services.ConfigurAuthentication(Configuration, isDevelopment);
 
 			services.AddMvcCore()
 				.AddApiExplorer()
@@ -62,14 +66,22 @@ namespace Api
 				.AddDataAnnotations()
 				.AddNewtonsoftJson()
 				.AddXmlSerializerFormatters();
+
 			services.AddHttpContextAccessor();
+
 			services.AddSignalR()
-				.AddJsonProtocol();
+				.AddMessagePackProtocol();
 
 			services.ConfigureDbContext(Configuration);
 
 			services.RegisterProviders();
 			services.RegisterServices(Configuration);
+
+			services.AddRabbitMq(Configuration);
+
+			services.AddLocalization();
+
+			services.AddHostedService<DevHostedService>();
 		}
 
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -80,19 +92,13 @@ namespace Api
 			}
 			else
 			{
-				//	app.UseHsts();
+				app.UseHsts();
 			}
 
 			app.SetCommonConfig();
 
 			app.UseCookiePolicy();
-			//	app.UseHttpsRedirection();
-
-			//app.UseStaticFiles(new StaticFileOptions()
-			//{
-			//	FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, "Pictures")),
-			//	RequestPath = "/Pictures"
-			//});
+			app.UseHttpsRedirection();
 
 			app.UseForwardedHeaders(new ForwardedHeadersOptions
 			{
@@ -105,12 +111,11 @@ namespace Api
 			app.UseAuthentication();
 			app.UseAuthorization();
 
-			app.UseCors();
-			//app.CorsConfiguration();
+			app.CorsConfiguration();
 
 			app.UseEndpoints(endpoints =>
 			{
-				endpoints.MapHub<Messanger>("/messanger");
+				endpoints.MapHub<MessangerHub>("/messanger", options => options.Transports = HttpTransportType.WebSockets);
 				endpoints.MapControllers();
 			});
 

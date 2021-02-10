@@ -1,0 +1,84 @@
+C:\Users\User\source\repos\Api\Api.Core\bin\Debug\netcoreapp3.1\Api.Core.deps.json
+C:\Users\User\source\repos\Api\Api.Core\bin\Debug\netcoreapp3.1\Api.Core.dll
+C:\Users\User\source\repos\Api\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Api\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Api\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.AssemblyInfo.cs
+C:\Users\User\source\repos\Api\Api.Core\bin\Debug\netcoreapp3.1\Api.Dal.dll
+C:\Users\User\source\repos\Api\Api.Core\bin\Debug\netcoreapp3.1\Api.Models.dll
+C:\Users\User\source\repos\Api\Api.Core\bin\Debug\netcoreapp3.1\Api.Provider.dll
+C:\Users\User\source\repos\Api\Api.Core\bin\Debug\netcoreapp3.1\Api.Services.dll
+C:\Users\User\source\repos\Api\Api.Core\bin\Debug\netcoreapp3.1\Api.Utils.dll
+C:\Users\User\source\repos\Api\Api.Core\bin\Debug\netcoreapp3.1\Api.Models.pdb
+C:\Users\User\source\repos\Api\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Api\Api.Core\bin\Debug\netcoreapp3.1\Api.Services.pdb
+C:\Users\User\source\repos\Api\Api.Core\bin\Debug\netcoreapp3.1\Api.Dal.pdb
+C:\Users\User\source\repos\Api\Api.Core\bin\Debug\netcoreapp3.1\Api.Provider.pdb
+C:\Users\User\source\repos\Api\Api.Core\bin\Debug\netcoreapp3.1\Api.Utils.pdb
+C:\Users\User\source\repos\Api\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.csproj.CopyComplete
+C:\Users\User\source\repos\Api\Api.Core\bin\Debug\netcoreapp3.1\Api.Core.pdb
+C:\Users\User\source\repos\Api\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.dll
+C:\Users\User\source\repos\Api\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.pdb
+D:\Рабочий стол\love\source\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Core.deps.json
+D:\Рабочий стол\love\source\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Core.dll
+D:\Рабочий стол\love\source\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Core.pdb
+D:\Рабочий стол\love\source\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Dal.dll
+D:\Рабочий стол\love\source\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Models.dll
+D:\Рабочий стол\love\source\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Provider.dll
+D:\Рабочий стол\love\source\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Services.dll
+D:\Рабочий стол\love\source\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Utils.dll
+D:\Рабочий стол\love\source\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Services.pdb
+D:\Рабочий стол\love\source\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Dal.pdb
+D:\Рабочий стол\love\source\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Models.pdb
+D:\Рабочий стол\love\source\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Provider.pdb
+D:\Рабочий стол\love\source\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Utils.pdb
+D:\Рабочий стол\love\source\Love.Server\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.csprojAssemblyReference.cache
+D:\Рабочий стол\love\source\Love.Server\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.AssemblyInfoInputs.cache
+D:\Рабочий стол\love\source\Love.Server\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.AssemblyInfo.cs
+D:\Рабочий стол\love\source\Love.Server\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.csproj.CopyComplete
+D:\Рабочий стол\love\source\Love.Server\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.dll
+D:\Рабочий стол\love\source\Love.Server\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.pdb
+D:\Рабочий стол\Seller\web\api\Api.Core\bin\Debug\netcoreapp3.1\Api.Core.deps.json
+D:\Рабочий стол\Seller\web\api\Api.Core\bin\Debug\netcoreapp3.1\Api.Core.dll
+D:\Рабочий стол\Seller\web\api\Api.Core\bin\Debug\netcoreapp3.1\Api.Core.pdb
+D:\Рабочий стол\Seller\web\api\Api.Core\bin\Debug\netcoreapp3.1\Api.Dal.dll
+D:\Рабочий стол\Seller\web\api\Api.Core\bin\Debug\netcoreapp3.1\Api.Models.dll
+D:\Рабочий стол\Seller\web\api\Api.Core\bin\Debug\netcoreapp3.1\Api.Provider.dll
+D:\Рабочий стол\Seller\web\api\Api.Core\bin\Debug\netcoreapp3.1\Api.Services.dll
+D:\Рабочий стол\Seller\web\api\Api.Core\bin\Debug\netcoreapp3.1\Api.Utils.dll
+D:\Рабочий стол\Seller\web\api\Api.Core\bin\Debug\netcoreapp3.1\Api.Services.pdb
+D:\Рабочий стол\Seller\web\api\Api.Core\bin\Debug\netcoreapp3.1\Api.Dal.pdb
+D:\Рабочий стол\Seller\web\api\Api.Core\bin\Debug\netcoreapp3.1\Api.Models.pdb
+D:\Рабочий стол\Seller\web\api\Api.Core\bin\Debug\netcoreapp3.1\Api.Provider.pdb
+D:\Рабочий стол\Seller\web\api\Api.Core\bin\Debug\netcoreapp3.1\Api.Utils.pdb
+D:\Рабочий стол\Seller\web\api\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.csprojAssemblyReference.cache
+D:\Рабочий стол\Seller\web\api\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.AssemblyInfoInputs.cache
+D:\Рабочий стол\Seller\web\api\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.AssemblyInfo.cs
+D:\Рабочий стол\Seller\web\api\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.csproj.CoreCompileInputs.cache
+D:\Рабочий стол\Seller\web\api\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.csproj.CopyComplete
+D:\Рабочий стол\Seller\web\api\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.dll
+D:\Рабочий стол\Seller\web\api\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.pdb
+D:\Рабочий стол\love\source\Love.Server\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.csproj.CoreCompileInputs.cache
+D:\Рабочий стол\love\source\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Factories.dll
+D:\Рабочий стол\love\source\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Factories.pdb
+D:\Рабочий стол\love\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Core.deps.json
+D:\Рабочий стол\love\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Core.dll
+D:\Рабочий стол\love\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Core.pdb
+D:\Рабочий стол\love\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Dal.dll
+D:\Рабочий стол\love\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Factories.dll
+D:\Рабочий стол\love\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Models.dll
+D:\Рабочий стол\love\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Provider.dll
+D:\Рабочий стол\love\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Services.dll
+D:\Рабочий стол\love\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Utils.dll
+D:\Рабочий стол\love\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Services.pdb
+D:\Рабочий стол\love\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Dal.pdb
+D:\Рабочий стол\love\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Factories.pdb
+D:\Рабочий стол\love\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Models.pdb
+D:\Рабочий стол\love\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Provider.pdb
+D:\Рабочий стол\love\Love.Server\Api.Core\bin\Debug\netcoreapp3.1\Api.Utils.pdb
+D:\Рабочий стол\love\Love.Server\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.csprojAssemblyReference.cache
+D:\Рабочий стол\love\Love.Server\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.AssemblyInfoInputs.cache
+D:\Рабочий стол\love\Love.Server\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.AssemblyInfo.cs
+D:\Рабочий стол\love\Love.Server\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.csproj.CoreCompileInputs.cache
+D:\Рабочий стол\love\Love.Server\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.csproj.CopyComplete
+D:\Рабочий стол\love\Love.Server\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.dll
+D:\Рабочий стол\love\Love.Server\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.pdb
