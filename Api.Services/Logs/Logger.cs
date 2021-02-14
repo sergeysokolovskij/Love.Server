@@ -7,9 +7,6 @@ namespace Api.Services.Logs
 {
 	public static class Logger
 	{
-		private const string logName = "logs.txt";
-		private const string errorName = "errors.txt";
-
 		private static string GetLogPathes(string logName)
 		{
 			return Path.Combine(Environment.CurrentDirectory, logName);
@@ -19,6 +16,8 @@ namespace Api.Services.Logs
 			string path = $"{GetLogPathes($"{DateTime.UtcNow}.txt")}";
 			File.AppendAllText(path, message);
 		}
+
+
 		public static void ErrorLog(Exception ex = null, string message = null)
 		{
 			string path = $"{GetLogPathes($"{DateTime.UtcNow}.txt")}";

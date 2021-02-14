@@ -8,6 +8,7 @@ using Api.Core.Hubs.Messanger;
 using Api.Models.Options;
 using Api.Providers;
 using Api.Services;
+using Api.Services.Quartz.Base;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http.Connections;
@@ -115,7 +116,9 @@ namespace Api
 
 			app.UseEndpoints(endpoints =>
 			{
-				endpoints.MapHub<MessangerHub>("/messanger", options => options.Transports = HttpTransportType.WebSockets);
+				endpoints.MapHub<MessangerHub>("/messanger");
+				endpoints.MapHub<UpdateNotifierHub>("/update");
+
 				endpoints.MapControllers();
 			});
 

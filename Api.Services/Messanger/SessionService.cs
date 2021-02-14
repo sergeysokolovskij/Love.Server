@@ -11,6 +11,7 @@ using Api.Services.Cache;
 using Api.Services.Crypt;
 using Api.Services.Exceptions;
 using Api.Services.Messanger.Models;
+using Api.Services.Processing;
 using Api.Utils;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -52,6 +53,9 @@ namespace Api.Services.Messanger
 
 		private readonly ISessionCacheService sessionCacheService;
 
+		private readonly ProcessingProvider processingProvider;
+
+
 		public SessionService(ISessionProvider sessionProvider,
 			ITransactionProvider transactionProvider,
 			IRsaCypher rsaCypher,
@@ -60,7 +64,8 @@ namespace Api.Services.Messanger
 			IStrongKeyProvider strongKeyProvider,
 			ICypherProvider cypherProvider,
 			IAesCipher aesCypher,
-			ISessionCacheService sessionCacheService)
+			ISessionCacheService sessionCacheService,
+			ProcessingProvider processingProvider)
 		{
 			this.transactionProvider = transactionProvider;
 			this.sessionProvider = sessionProvider;
@@ -71,6 +76,7 @@ namespace Api.Services.Messanger
 			this.cypherProvider = cypherProvider;
 			this.aesCypher = aesCypher;
 			this.sessionCacheService = sessionCacheService;
+			this.processingProvider = processingProvider;
 		}
 
 		public async Task<CreateFirstMessangerSessionResponse> MakeFirstSessionAsync(CreateMessangerSessionRequest model,
@@ -189,7 +195,10 @@ namespace Api.Services.Messanger
 			var session = await sessionProvider.GetModelBySearchPredicate(x => x.SessionId == decryptedSessionId && x.UserId == userId);
 			if (session == null)
 				throw new ApiError(new ServerException("Incorrect session"));
+
 			await sessionCacheService.CacheSessionKeysAsync(tokenId, userId, decryptedSessionId);
+
+			await processingProvider.readMessagesProcessingHandler.HandleAsync(decryptedSessionId);
 		}
 	}
 }

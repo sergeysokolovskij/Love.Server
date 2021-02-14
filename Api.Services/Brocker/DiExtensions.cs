@@ -10,7 +10,7 @@ namespace Api.Services.Brocker
 		public static void AddBrockerService(this IServiceCollection serviceCollection)
 		{
 			serviceCollection.AddSingleton<IConnectionsProvider, ConnectionsProvider>();
-			serviceCollection.AddSingleton<IBrockerService, BrockerService>();
+			serviceCollection.AddSingleton<IBrockerService, InitBrockerService>();
 		}
 	}
 }

@@ -11,6 +11,8 @@ namespace Api.Services.Messanger
 		{
 			serviceCollection.AddScoped<IMessangerService, MessangerService>();
 			serviceCollection.AddScoped<ISessionService, SessionService>();
+			serviceCollection.AddScoped<IChatAcessService, ChatAcessService>();
+			serviceCollection.AddScoped<IChatService, ChatService>();
 		}
 	}
 }

@@ -89,7 +89,7 @@ namespace Api.Services.HubServices
 
 				if (string.IsNullOrEmpty(currentConnection)) // сейчас юзер с такой сессией находится в оффлайн либо в фоне
 				{
-					brockerService.PublishMessage(messageToSend.Key, messageToSend.Value);
+					//brockerService.PublishMessage(messageToSend.Key, messageToSend.Value);
 					continue;
 				}
 
@@ -97,7 +97,5 @@ namespace Api.Services.HubServices
 			}
 			return result;
 		}
-
-		
 	}
 }

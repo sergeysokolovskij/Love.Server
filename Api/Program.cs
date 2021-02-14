@@ -24,6 +24,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
 
 namespace Api
 {
@@ -73,8 +74,7 @@ namespace Api
 			}
 
 			var brocker = scope.ServiceProvider.GetRequiredService<IBrockerService>();
-
-            brocker.SubscribeToQuee("sadsdadsa");
+			brocker.Init();
 
             var subscriber = scope.ServiceProvider.GetRequiredService<ISubscriber>();
 			await subscriber.SetAllSubscribersAsync();

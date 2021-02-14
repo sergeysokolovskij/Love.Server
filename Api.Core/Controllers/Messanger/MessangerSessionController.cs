@@ -2,6 +2,7 @@
 using Api.Providers;
 using Api.Services.Cache;
 using Api.Services.Messanger;
+using Api.Services.Processing;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ShopPlatform.Controllers;
@@ -18,8 +19,7 @@ namespace Api.Core.Controllers.Messanger
 	public class MessangerSessionController : BaseController
 	{
 		private readonly ISessionService sessionService;
-		
-
+	
 		public MessangerSessionController(IServiceProvider serviceProvider, 
 			IUserProvider userProvider,
 			ISessionService sessionService) : base(serviceProvider, userProvider)
@@ -34,6 +34,7 @@ namespace Api.Core.Controllers.Messanger
 		{
 			var user = await GetUserAsync();
 			var result = await sessionService.MakeFirstSessionAsync(model, user.Id, TokenId);
+
 			return Json(result);
 		}
 
@@ -54,9 +55,8 @@ namespace Api.Core.Controllers.Messanger
 		public async Task<IActionResult> CacheSessionAsync(string sessionId)
 		{
 			var user = await GetUserAsync();
-			
 			await sessionService.CacheSessionKeyAsync(user.Id, sessionId, TokenId);
-
+			
 			return Ok();
 		} 
 	}

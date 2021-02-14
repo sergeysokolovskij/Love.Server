@@ -107,7 +107,6 @@ namespace Api.Services.Auth
             return cryptedToken;
         }
 
-
         public async Task<string> DecryptEmailToken(string token)
 		{
             var decryptToken = await crypt.DecryptString(EmailCypherNameId, token);

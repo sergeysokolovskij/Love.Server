@@ -7,6 +7,7 @@ using Api.Services.Email;
 using Api.Services.Messanger;
 using Api.Services.Brocker;
 using Api.Services.HubServices;
+using Api.Services.Processing;
 
 namespace Api.Services
 {
@@ -21,6 +22,7 @@ namespace Api.Services
 			serviceCollection.AddMessageServices();
 			serviceCollection.AddBrockerService();
 			serviceCollection.AddHubs();
+			serviceCollection.AddProcessingServices();
 		} 
 	}
 }

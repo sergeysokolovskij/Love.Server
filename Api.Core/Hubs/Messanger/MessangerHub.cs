@@ -25,17 +25,14 @@ namespace Api.Core.Hubs.Messanger
 	{
 		private readonly IMessangerHubService messangerHub;
 		private readonly IMessangerService messangerService;
-		private readonly IConnectionCacheService connectionCacheService;
 
 		public MessangerHub(
 			IServiceProvider serviceProvider,
 			IMessangerHubService messangerHub,
-			IMessangerService messangerService,
-			IConnectionCacheService connectionCacheService) : base(serviceProvider)
+			IMessangerService messangerService) : base(serviceProvider)
 		{
 			this.messangerHub = messangerHub;
 			this.messangerService = messangerService;
-			this.connectionCacheService = connectionCacheService;
 		}
 
 		[Authorize(Roles = "ProtocoledUsers")]

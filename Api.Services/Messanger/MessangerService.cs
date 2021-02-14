@@ -27,6 +27,7 @@ namespace Api.Services.Messanger
 	{
 		Task<IDictionary<string, string>> GetMessagesToSendAsync(string message);
 		IAsyncEnumerable<List<string>> GetUserToNotifyOnlineAsync(string userId);
+		Task<bool> ReadMessageAsync(string message);
 	}
 	public class MessangerService : IMessangerService
 	{
@@ -119,7 +120,7 @@ namespace Api.Services.Messanger
 		}
 
 		public async IAsyncEnumerable<List<string>> GetUserToNotifyOnlineAsync(string userId)
-		{         
+		{			
 			var dialogs = await dialogProvider.GetModelsBySearchPredicate(x => x.User1Id == userId || x.User2Id == userId);
 			if (dialogs == null || dialogs.Count == 0)
 				yield break;
@@ -140,9 +141,19 @@ namespace Api.Services.Messanger
 			}
 		}
 
-		public async Task GetSyncDataAsync(string userId)
+        public async Task<bool> ReadMessageAsync(string message)
         {
-			
+			var model = JsonConvert.DeserializeObject<MessageDto>(message);
+			var savedMessage = await messageProvider.GetModelBySearchPredicate(x => x.MessageId == model.Message.MessageId);
+			if (savedMessage == null)
+            {
+				// логируем ошибку
+            }
+
+			savedMessage.IsReaded = true;
+			await messageProvider.CreateOrUpdateAsync(savedMessage);
+
+			return true;
         }
-	}
+    }
 }

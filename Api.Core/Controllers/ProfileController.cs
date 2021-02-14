@@ -6,6 +6,7 @@ using ShopPlatform.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Api.Core.Controllers
 {
@@ -18,5 +19,10 @@ namespace Api.Core.Controllers
 			IUserProvider userProvider) : base(serviceProvider, userProvider)
 		{
 		}
+
+		public async Task<IActionResult> AddPictureAsync()
+        {
+			return Ok();
+        } 
 	}
 }
