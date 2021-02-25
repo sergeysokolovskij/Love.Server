@@ -40,26 +40,22 @@ namespace Api.Services.Exceptions
 		}
 		public ServerException(string description, ErrorTypes type = ErrorTypes.Visible)
 		{
-			Code = 500;
 			Description = description;
 			ErrorType = type;
 		}
 		public ServerException(int code, string description, ErrorTypes type = ErrorTypes.Visible)
 		{
-			Code = code;
 			Description = description;
 			ErrorType = type;
 		}
 		public ServerException(int code, string description, string message ,ErrorTypes type)
 		{
-			Code = code;
 			Description = description;
 			this.message = message;
 			ErrorType = type;
 		}
 		public ServerException(int code, string description, string message, ErrorTypes type, Exception ex)
 		{
-			Code = code;
 			Description = description;
 			ErrorType = type;
 			this.message = message;

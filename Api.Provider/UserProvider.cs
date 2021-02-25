@@ -1,6 +1,7 @@
 ﻿using Api.DAL;
 using Api.DAL.Base;
 using Api.Models.Options;
+using Api.Provider.Messanger;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Options;
@@ -27,10 +28,14 @@ namespace Api.Providers
 
 	public class UserProvider : BaseProvider<User>, IUserProvider
 	{
+		private readonly ISessionProvider sessionProvider;
+
 		private readonly IOptions<TokenLifeTimeOptions> tokenOptions;
 		public UserProvider(ApplicationContext dbContext,
+			ISessionProvider sessionProvider,
 			IOptions<TokenLifeTimeOptions> tokenOptions) : base(dbContext)
 		{
+			this.sessionProvider = sessionProvider;
 			this.tokenOptions = tokenOptions;
 		}
 
@@ -48,7 +53,7 @@ namespace Api.Providers
 			savedItem.FingerPrint = longSession.FingerPrint;
 			savedItem.Value = longSession.Value;
 
-			savedItem.CreatedAt = DateTime.Now;
+			savedItem.Created = DateTime.Now;
 			savedItem.ExpiresIn = DateTime.Now.AddDays(tokenOptions.Value.RefreshTokenLifeTime);
 
 			await db.LongSessions.AddAsync(savedItem);
@@ -70,7 +75,12 @@ namespace Api.Providers
 				return false;
 
 			if (savedItem.ExpiresIn < DateTime.Now)
+			{
+				db.Remove(savedItem);
+				await db.SaveChangesAsync();
+
 				return false;
+			}
 
 			savedItem.Value = newLongSessionValue;
 			savedItem.FingerPrint = newFingerPrint;
@@ -99,8 +109,20 @@ namespace Api.Providers
 
 			user.EmailConfirmed = true;
 
-			db.Entry(user).State = EntityState.Modified;
+			await UpdateAsync(user);
 			return await db.SaveChangesAsync() > 0;
 		}
+
+		public async Task<bool> ConfirmUserEmailAsync(string userId)
+        {
+			var user = await db.Users.FirstOrDefaultAsync(x => x.Id == userId);
+			if (user == null)
+				return false;
+
+			user.PhoneNumberConfirmed = true;
+			await UpdateAsync(user);
+
+			return await db.SaveChangesAsync() > 0;
+        }
 	}
 }

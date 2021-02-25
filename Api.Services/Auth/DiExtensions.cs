@@ -11,7 +11,7 @@ namespace Api.Services.Auth
         public static void AddAuthService(this IServiceCollection serviceCollection)
         {
             serviceCollection.AddScoped<IAuthService, AuthService>();
-            serviceCollection.AddSingleton<IJwtService, JwtService>();
+            serviceCollection.AddScoped<IJwtService, JwtService>();
 
             serviceCollection.AddSingleton<IJwtSigningEncodingKey>(services =>
             {

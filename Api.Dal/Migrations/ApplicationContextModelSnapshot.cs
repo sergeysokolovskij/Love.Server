@@ -19,21 +19,30 @@ namespace Api.Dal.Migrations
 
             modelBuilder.Entity("Api.DAL.Cypher", b =>
                 {
-                    b.Property<string>("Name")
-                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<byte[]>("Secret")
                         .HasColumnType("longblob");
 
-                    b.HasKey("Name");
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Cyphers");
 
                     b.HasData(
                         new
                         {
-                            Name = "EmailCypher",
-                            Secret = new byte[] { 193, 13, 50, 46, 43, 19, 154, 129, 93, 130, 76, 208, 115, 31, 141, 84, 154, 133, 200, 92, 162, 47, 93, 162, 238, 17, 29, 104, 113, 77, 129, 60 }
+                            Id = 1L,
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Secret = new byte[] { 98, 146, 181, 59, 73, 92, 4, 220, 171, 173, 149, 111, 160, 119, 120, 51, 98, 98, 58, 6, 108, 251, 50, 12, 28, 80, 4, 183, 6, 85, 91, 95 },
+                            Updated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -43,7 +52,7 @@ namespace Api.Dal.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("Created")
                         .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("ExpiresIn")
@@ -51,6 +60,9 @@ namespace Api.Dal.Migrations
 
                     b.Property<string>("FingerPrint")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("UserId")
                         .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
@@ -76,6 +88,9 @@ namespace Api.Dal.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Email")
                         .HasColumnType("varchar(256) CHARACTER SET utf8mb4")
@@ -107,11 +122,20 @@ namespace Api.Dal.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<long>("ProfileId")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
+                    b.Property<long>("StrongKeyId")
+                        .HasColumnType("bigint");
+
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("UserName")
                         .HasColumnType("varchar(256) CHARACTER SET utf8mb4")
@@ -127,6 +151,661 @@ namespace Api.Dal.Migrations
                         .HasName("UserNameIndex");
 
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("Api.Dal.Accounting.AccountingComment", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Comment")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AccountingComments");
+                });
+
+            modelBuilder.Entity("Api.Dal.Accounting.AccountingPlan", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<long?>("ParentId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AccountingPlans");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            Name = "LoginTime"
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            Name = "LogoutTime"
+                        });
+                });
+
+            modelBuilder.Entity("Api.Dal.Accounting.AccountingRecord", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("AccountingPlanId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("SubConto1")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("SubConto2")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AccountingPlanId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AccountingRecords");
+                });
+
+            modelBuilder.Entity("Api.Dal.Accounting.Flow", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("AccountingCommentId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("AccountingPlanId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("FollowInformation")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<long?>("FromId")
+                        .HasColumnType("bigint");
+
+                    b.Property<Guid>("PostingId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<long?>("ToId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AccountingCommentId");
+
+                    b.HasIndex("FromId");
+
+                    b.HasIndex("ToId");
+
+                    b.ToTable("Flows");
+                });
+
+            modelBuilder.Entity("Api.Dal.Accounting.UserOnlineAccounting", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<bool>("IsOnline")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserOnlineAccountings");
+                });
+
+            modelBuilder.Entity("Api.Dal.Auth.Session", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ClientPublicKey")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("ServerPrivateKey")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("ServerPublicKey")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("SessionId")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Sessions");
+                });
+
+            modelBuilder.Entity("Api.Dal.Auth.StrongKey", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<long>("CypherId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CypherId");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("StrongKeys");
+                });
+
+            modelBuilder.Entity("Api.Dal.BaseCharecters", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Lng")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BaseCharacters");
+                });
+
+            modelBuilder.Entity("Api.Dal.Characters", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("BaseCharectersId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Lng")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<long>("ProfileId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BaseCharectersId");
+
+                    b.HasIndex("ProfileId");
+
+                    b.ToTable("Characters");
+                });
+
+            modelBuilder.Entity("Api.Dal.City", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("CountryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
+
+                    b.ToTable("Cities");
+                });
+
+            modelBuilder.Entity("Api.Dal.Connection", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ConnectionId")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("SessionId")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Connections");
+                });
+
+            modelBuilder.Entity("Api.Dal.Cordinate", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<float>("Lautitude")
+                        .HasColumnType("float");
+
+                    b.Property<float>("Longtitude")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Cordinates");
+                });
+
+            modelBuilder.Entity("Api.Dal.Country", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Countries");
+                });
+
+            modelBuilder.Entity("Api.Dal.Dev.UserAccount", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Login")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserAccounts");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            Created = new DateTime(2021, 2, 20, 16, 29, 49, 855, DateTimeKind.Local).AddTicks(7320),
+                            Login = "test1@mail.ru",
+                            Password = "asddasSdas#112",
+                            Updated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = "2",
+                            Created = new DateTime(2021, 2, 20, 16, 29, 49, 858, DateTimeKind.Local).AddTicks(7168),
+                            Login = "test2@mail.ru",
+                            Password = "asddasSdasdas#212",
+                            Updated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
+                });
+
+            modelBuilder.Entity("Api.Dal.Like", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Likes");
+                });
+
+            modelBuilder.Entity("Api.Dal.Message", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<long>("CypherId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("DialogId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsReaded")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("MessageId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<string>("MessageText")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("ReceiverId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<string>("SenderId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CypherId");
+
+                    b.HasIndex("DialogId");
+
+                    b.HasIndex("MessageId");
+
+                    b.HasIndex("ReceiverId", "SenderId");
+
+                    b.ToTable("Messages");
+                });
+
+            modelBuilder.Entity("Api.Dal.Messanger.Dialog", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("User1Id")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("User2Id")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Dialogs");
+                });
+
+            modelBuilder.Entity("Api.Dal.Picture", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("Data")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Path")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<long?>("ProfileId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProfileId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Pictures");
+                });
+
+            modelBuilder.Entity("Api.Dal.Profile", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<long>("CityId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("CountryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CityId");
+
+                    b.HasIndex("CountryId");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("Profiles");
+                });
+
+            modelBuilder.Entity("Api.Dal.PushTask", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<bool>("IsCompleted")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("PushTasks");
+                });
+
+            modelBuilder.Entity("Api.Dal.RsaKey", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("PrivateKey")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("PublicKey")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RsaKeys");
+                });
+
+            modelBuilder.Entity("Api.Dal.UserPair", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("UserId1")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<string>("UserId2")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId1", "UserId2");
+
+                    b.ToTable("UserPairs");
+                });
+
+            modelBuilder.Entity("Api.Dal.UserToken", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<int>("UserTokenType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserProcessingTokens");
+                });
+
+            modelBuilder.Entity("Api.Dal.Visit", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("UserId1")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("UserId1");
+
+                    b.ToTable("Visits");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -157,17 +836,24 @@ namespace Api.Dal.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "e24493e9-063b-4f01-8ee5-bf0eab889b37",
-                            ConcurrencyStamp = "d833f84f-ad77-49a0-8cc8-6d068b95c68e",
+                            Id = "6913b5af-ee01-475b-ba98-d8149cc37695",
+                            ConcurrencyStamp = "b0f7e657-9091-4667-97e1-e870be71d0bb",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "100cb26d-fa71-4741-acfa-1bce0b657ab8",
-                            ConcurrencyStamp = "647b88c0-6bf1-4ef5-89c2-04f404867a36",
+                            Id = "a5345cad-1c29-45ac-9bce-ca63f64c0c43",
+                            ConcurrencyStamp = "1d2618eb-6448-4e27-9e7b-39b68b81a677",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "f981d765-0c5a-4e46-b21e-861add8f553d",
+                            ConcurrencyStamp = "0ba85b72-0513-4291-9804-a850f073d6c3",
+                            Name = "ProtocoledUsers",
+                            NormalizedName = "PROTOCOLEDUSERS"
                         });
                 });
 
@@ -278,6 +964,179 @@ namespace Api.Dal.Migrations
                     b.HasOne("Api.DAL.User", "User")
                         .WithMany("LongSessions")
                         .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Api.Dal.Accounting.AccountingRecord", b =>
+                {
+                    b.HasOne("Api.Dal.Accounting.AccountingPlan", "AccountingPlan")
+                        .WithMany()
+                        .HasForeignKey("AccountingPlanId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Api.DAL.User", "User")
+                        .WithMany("AccountingRecords")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Api.Dal.Accounting.Flow", b =>
+                {
+                    b.HasOne("Api.Dal.Accounting.AccountingComment", "AccountingComment")
+                        .WithMany()
+                        .HasForeignKey("AccountingCommentId");
+
+                    b.HasOne("Api.Dal.Accounting.AccountingRecord", "From")
+                        .WithMany()
+                        .HasForeignKey("FromId");
+
+                    b.HasOne("Api.Dal.Accounting.AccountingRecord", "To")
+                        .WithMany()
+                        .HasForeignKey("ToId");
+                });
+
+            modelBuilder.Entity("Api.Dal.Accounting.UserOnlineAccounting", b =>
+                {
+                    b.HasOne("Api.DAL.User", "User")
+                        .WithMany("UserOnlineAccountings")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Api.Dal.Auth.Session", b =>
+                {
+                    b.HasOne("Api.DAL.User", "User")
+                        .WithMany("Sessions")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Api.Dal.Auth.StrongKey", b =>
+                {
+                    b.HasOne("Api.DAL.Cypher", "Cypher")
+                        .WithMany()
+                        .HasForeignKey("CypherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Api.DAL.User", "User")
+                        .WithOne("StrongKey")
+                        .HasForeignKey("Api.Dal.Auth.StrongKey", "UserId");
+                });
+
+            modelBuilder.Entity("Api.Dal.Characters", b =>
+                {
+                    b.HasOne("Api.Dal.BaseCharecters", "BaseCharacters")
+                        .WithMany()
+                        .HasForeignKey("BaseCharectersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Api.Dal.Profile", "Profile")
+                        .WithMany("Characters")
+                        .HasForeignKey("ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Api.Dal.City", b =>
+                {
+                    b.HasOne("Api.Dal.Country", "Country")
+                        .WithMany("Cities")
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Api.Dal.Connection", b =>
+                {
+                    b.HasOne("Api.DAL.User", "User")
+                        .WithMany("Connections")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Api.Dal.Cordinate", b =>
+                {
+                    b.HasOne("Api.DAL.User", "User")
+                        .WithMany("Cordinates")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Api.Dal.Like", b =>
+                {
+                    b.HasOne("Api.DAL.User", "User")
+                        .WithMany("Likes")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Api.Dal.Message", b =>
+                {
+                    b.HasOne("Api.DAL.Cypher", "Cypher")
+                        .WithMany()
+                        .HasForeignKey("CypherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Api.Dal.Messanger.Dialog", "Dialog")
+                        .WithMany()
+                        .HasForeignKey("DialogId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Api.Dal.Picture", b =>
+                {
+                    b.HasOne("Api.Dal.Profile", null)
+                        .WithMany("Pictures")
+                        .HasForeignKey("ProfileId");
+
+                    b.HasOne("Api.DAL.User", "User")
+                        .WithMany("Pictures")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Api.Dal.Profile", b =>
+                {
+                    b.HasOne("Api.Dal.City", "City")
+                        .WithMany("Profiles")
+                        .HasForeignKey("CityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Api.Dal.Country", "Country")
+                        .WithMany("Profiles")
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Api.DAL.User", "User")
+                        .WithOne("Profile")
+                        .HasForeignKey("Api.Dal.Profile", "UserId");
+                });
+
+            modelBuilder.Entity("Api.Dal.PushTask", b =>
+                {
+                    b.HasOne("Api.DAL.User", "User")
+                        .WithMany("PushTasks")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Api.Dal.RsaKey", b =>
+                {
+                    b.HasOne("Api.DAL.User", "User")
+                        .WithMany("RsaKeys")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Api.Dal.UserToken", b =>
+                {
+                    b.HasOne("Api.DAL.User", "User")
+                        .WithMany("UserTokens")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Api.Dal.Visit", b =>
+                {
+                    b.HasOne("Api.DAL.User", "User")
+                        .WithMany("Visits")
+                        .HasForeignKey("UserId1");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

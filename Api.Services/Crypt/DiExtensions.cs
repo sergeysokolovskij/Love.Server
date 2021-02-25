@@ -3,6 +3,7 @@ using Api.Services.Auth;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Api.Services.Messanger;
 
 namespace Api.Services.Crypt
 {
@@ -10,7 +11,9 @@ namespace Api.Services.Crypt
 	{
 		public static void RegisterCyphers(this IServiceCollection serviceCollection)
 		{
-			serviceCollection.AddSingleton<IAesCipher, AesCipher>();
+			serviceCollection.AddScoped<IAesCipher, AesCipher>();
+			serviceCollection.AddScoped<IRsaCypher, RsaCypher>();
+			serviceCollection.AddScoped<IMessangerCryptor, MessangerCryptor>();
 		}
 	}
 }

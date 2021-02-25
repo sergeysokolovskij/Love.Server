@@ -7,24 +7,24 @@ namespace Api.Services.Logs
 {
 	public static class Logger
 	{
-		private const string logName = "logs.txt";
-		private const string errorName = "errors.txt";
-		private static string GetLogPathes(string type)
+		private static string GetLogPathes(string logName)
 		{
-			if (type == logName)
-				return Path.Combine(Environment.CurrentDirectory, "Errors", logName);
-			else if (type == errorName)
-				return Path.Combine(Environment.CurrentDirectory, "Errors", errorName);
-			throw new ApiError(new ServerException("Invalid log names"));
+			return Path.Combine(Environment.CurrentDirectory, logName);
 		}
 		public static void WriteLog(string message)
 		{
-			var path = GetLogPathes(logName);
+			string path = $"{GetLogPathes($"{DateTime.UtcNow}.txt")}";
 			File.AppendAllText(path, message);
 		}
+
+
 		public static void ErrorLog(Exception ex = null, string message = null)
 		{
-			var path = GetLogPathes(errorName);
+			string path = $"{GetLogPathes($"{DateTime.UtcNow}.txt")}";
+
+			if (!File.Exists(path))
+				File.Create(path);
+
 			StringBuilder sb = new StringBuilder();
 
 			sb.AppendLine(DateTime.Now.ToString());
@@ -40,6 +40,7 @@ namespace Api.Services.Logs
 					sb.AppendLine(ex.InnerException.Message);
 				sb.AppendLine();
 			}
+
 			if (message != null)
 				sb.AppendLine(message);
 			var result = sb.ToString();

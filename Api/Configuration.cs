@@ -77,7 +77,7 @@ namespace Api
                                    ClockSkew = TimeSpan.Zero,
                                    ValidateLifetime = true,
                                    ValidateAudience = false,
-                                   ValidateIssuer = false,
+                                   ValidateIssuer = true,
                                    ValidateIssuerSigningKey = true
                                };
 
@@ -87,6 +87,7 @@ namespace Api
                                    {
                                        var accessToken = context.Request.Query["access_token"];
                                        var path = context.HttpContext.Request.Path;
+
                                        if (!string.IsNullOrEmpty(accessToken))
                                            context.Token = accessToken;
                                        return Task.CompletedTask;
@@ -104,7 +105,7 @@ namespace Api
                 {
                     policyOptions.WithOrigins(cors)
                                  .AllowAnyMethod()
-                                 .AllowAnyHeader()
+                                 .AllowAnyHeader() 
                                  .AllowCredentials()
                                  .WithExposedHeaders();
                 }));
@@ -113,7 +114,7 @@ namespace Api
         public static void ConfigureDbContext(this IServiceCollection serviceCollection, IConfiguration configuration)
         {
             serviceCollection.AddDbContext<ApplicationContext>(options => options.UseMySql(configuration.GetConnectionString("MySql"))
-            , ServiceLifetime.Transient);
+                ,ServiceLifetime.Scoped);
 
         }
 
@@ -155,6 +156,11 @@ namespace Api
                     ErrorsMode.SetErrorsMode(false);
             }
         }
+
+        public static void AddRabbitMq(this IServiceCollection serviceCollection,
+            IConfiguration configuration)
+		{
+		}
     }
 
     public class Configuration

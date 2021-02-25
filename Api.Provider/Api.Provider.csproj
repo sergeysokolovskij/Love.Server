@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="StackExchange.Redis" Version="2.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Api.Dal\Api.Dal.csproj" />
     <ProjectReference Include="..\Api.Models\Api.Models.csproj" />
   </ItemGroup>

@@ -1,4 +1,6 @@
 ﻿using Api.Models.Options;
+using Api.Models.RequestModels.AccountController;
+using Api.Providers;
 using Api.Services.Auth;
 using Api.Services.Authentication;
 using Api.Services.Exceptions;
@@ -15,6 +17,7 @@ using Microsoft.IdentityModel.JsonWebTokens;
 using ShopPlatform.Controllers;
 using ShopPlatform.Models.RequestModels;
 using System;
+using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using System.Security.Claims;
@@ -26,7 +29,6 @@ using System.Threading.Tasks;
 namespace Api.Core.Controllers
 {
 	[ApiController]
-	[AllowAnonymous]
 	[Route("[controller]")]
 	public class AccountController : BaseController
 	{
@@ -36,28 +38,32 @@ namespace Api.Core.Controllers
 		private readonly ILogger<AccountController> logger;
 		public AccountController(IServiceProvider serviceProvider,
 			IAuthService authService,
+			IUserProvider userProvider,
 			IOptions<UrlPathOptions> urlPathOptions,
-			ILoggerFactory loggerFactory) : base(serviceProvider)
+			ILoggerFactory loggerFactory) : base(serviceProvider, userProvider)
 		{
 			this.authService = authService;
 			this.urlPathOptions = urlPathOptions;
 			this.logger = loggerFactory.CreateLogger<AccountController>();
 		}
+
+	
+		//стандарт для веба
 		[HttpPost("signin")]
 		public async Task<IActionResult> SignInAsync([FromForm]LoginModel model)
 		{
 			try
 			{
-				var longSession = "";
+				string longSessionValue = "";
 
-				if (HttpContext.Request.Cookies.TryGetValue(AuthConstants.LongSession, out string longSessionValue))
-					longSession = longSessionValue;
-				else
-					longSession = CryptoRandomizer.GetRandomString(32);
-
+				if (!string.IsNullOrEmpty(model.RefreshToken))
+					longSessionValue = model.RefreshToken;
+				else if (HttpContext.Request.Cookies.TryGetValue(AuthConstants.LongSession, out string _longSessionValue)) // если заход с браузера
+					longSessionValue = _longSessionValue;
+			
 				var userAgent = HttpUtilities.GetDataFromHeaders(HttpContext, HttpConstants.UserAgentHeaderName);
-				var fingerPrint = authService.GetFingerPrint(userAgent, longSession);
-				var authResult = await authService.AuthorizeByPasswordAsync(model.UserName, model.Password, fingerPrint, longSession, userAgent);
+				var fingerPrint = authService.GetFingerPrint(userAgent, longSessionValue);
+				var authResult = await authService.AuthorizeByPasswordAsync(model.UserName, model.Password,longSessionValue, userAgent);
 
 				authService.MakeLongSessionCookies(authResult.RefreshToken);
 
@@ -69,6 +75,7 @@ namespace Api.Core.Controllers
 			}
 		}
 
+		//стандарт для веба
 		[HttpPost("signup")]
 		public async Task<IActionResult> SignUpAsync([FromForm]RegisterModel model)
 		{
@@ -90,16 +97,21 @@ namespace Api.Core.Controllers
 		}	
 
 		[HttpPost("longsessionupdate")]
-		public async Task<IActionResult> LongSessionUpdateAsync()
+		public async Task<IActionResult> LongSessionUpdateAsync([FromBody] RefreshTokenUpdateModel model)
 		{
 			try
 			{
-				if (!HttpContext.Request.Cookies.TryGetValue(AuthConstants.LongSession, out string longSession))
+				string refreshToken = "";
+				if (!string.IsNullOrEmpty(model.RefreshToken))
+					refreshToken = model.RefreshToken;
+				else if (!HttpContext.Request.Cookies.TryGetValue(AuthConstants.LongSession, out string _refreshToken))
+					refreshToken = _refreshToken;
+				else
 					return Redirect(Path.Combine(urlPathOptions.Value.Site, "Account/login"));
 
-				var fingerPrint = authService.GetFingerPrint(HttpUtilities.GetDataFromHeaders(HttpContext, HttpConstants.UserAgentHeaderName), longSession);
+				var fingerPrint = authService.GetFingerPrint(HttpUtilities.GetDataFromHeaders(HttpContext, HttpConstants.UserAgentHeaderName), refreshToken);
 				var userAgent = HttpUtilities.GetDataFromHeaders(HttpContext, HttpConstants.UserAgentHeaderName);
-				var result = await authService.UpdateLongSessionAsync(longSession, fingerPrint, userAgent);
+				var result = await authService.UpdateLongSessionAsync(refreshToken, fingerPrint, userAgent);
 
 				authService.MakeLongSessionCookies(result.RefreshToken);
 
@@ -132,18 +144,32 @@ namespace Api.Core.Controllers
 			authService.MakeLogoutCookies();
 			return Ok(); 
 		}
-
+		
+		[Authorize]
 		[HttpGet("getauthuserinfo")]
-		public IActionResult GetAuthUserInfo()
+		public async Task<IActionResult> GetAuthUserInfo()
 		{
 			if (!User.Identity.IsAuthenticated)
 				return Unauthorized();
 
+			var currentUser = await userProvider.GetModelBySearchPredicate(x => x.UserName == UserName);
+			string currentSessionId = TokenId;
+
 			return Json(new
 			{
 				Login = UserName,
-				Role = RoleName
-			});
+				Roles = RoleNames,
+				IsPhoneConfirmed = currentUser.PhoneNumberConfirmed,
+				IsEmailConfirmed = currentUser.EmailConfirmed
+			});	
+		}
+
+
+		[HttpGet]
+		[Authorize]
+		public async Task<IActionResult> MakePhoneConfirmTokenAsync()
+		{
+			return Ok();
 		}
 	}
 }

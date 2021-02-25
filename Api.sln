@@ -3,19 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{9AE3E346-BCC1-4D6A-80D5-0464BA4C0454}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{9AE3E346-BCC1-4D6A-80D5-0464BA4C0454}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Dal", "Api.Dal\Api.Dal.csproj", "{805CF781-F188-40DD-ACCA-C824C9BFED47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Dal", "Api.Dal\Api.Dal.csproj", "{805CF781-F188-40DD-ACCA-C824C9BFED47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Utils", "Api.Utils\Api.Utils.csproj", "{F4B5F6A3-FACC-4E82-BC7C-A221C9A17FEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Utils", "Api.Utils\Api.Utils.csproj", "{F4B5F6A3-FACC-4E82-BC7C-A221C9A17FEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Provider", "Api.Provider\Api.Provider.csproj", "{2A69C2D9-C451-43DA-A600-06F67BB0B00D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Provider", "Api.Provider\Api.Provider.csproj", "{2A69C2D9-C451-43DA-A600-06F67BB0B00D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Services", "Api.Services\Api.Services.csproj", "{28211833-C110-46CC-B6F4-B877A1E2EEF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Services", "Api.Services\Api.Services.csproj", "{28211833-C110-46CC-B6F4-B877A1E2EEF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Models", "Api.Models\Api.Models.csproj", "{C646AE01-AC9A-48F1-BF68-7515CB907E3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Models", "Api.Models\Api.Models.csproj", "{C646AE01-AC9A-48F1-BF68-7515CB907E3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Core", "Api.Core\Api.Core.csproj", "{42D042A5-826F-4C88-9DD5-F45AAC4D241B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Core", "Api.Core\Api.Core.csproj", "{42D042A5-826F-4C88-9DD5-F45AAC4D241B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Tests", "Api.Tests\Api.Tests.csproj", "{DE639742-502D-4EB2-95C0-31AACF07F388}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Factories", "Api.Factories\Api.Factories.csproj", "{96C9BBEF-782E-4E0B-A067-A8E02E486DCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{42D042A5-826F-4C88-9DD5-F45AAC4D241B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42D042A5-826F-4C88-9DD5-F45AAC4D241B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42D042A5-826F-4C88-9DD5-F45AAC4D241B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE639742-502D-4EB2-95C0-31AACF07F388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE639742-502D-4EB2-95C0-31AACF07F388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE639742-502D-4EB2-95C0-31AACF07F388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE639742-502D-4EB2-95C0-31AACF07F388}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96C9BBEF-782E-4E0B-A067-A8E02E486DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96C9BBEF-782E-4E0B-A067-A8E02E486DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96C9BBEF-782E-4E0B-A067-A8E02E486DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96C9BBEF-782E-4E0B-A067-A8E02E486DCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

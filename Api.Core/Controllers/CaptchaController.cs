@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Api.Providers;
+using Microsoft.AspNetCore.Mvc;
 using ShopPlatform.Controllers;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,8 @@ namespace ShopPlatforms.Core.Controllers
 {
 	public class CaptchaController : BaseController
 	{
-		public CaptchaController(IServiceProvider serviceProvider) : base(serviceProvider)
+		public CaptchaController(IServiceProvider serviceProvider,
+			IUserProvider userProvider) : base(serviceProvider, userProvider)
 		{
 		}
 	}
