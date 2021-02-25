@@ -8,6 +8,8 @@ using Api.Services.Messanger;
 using Api.Services.Brocker;
 using Api.Services.HubServices;
 using Api.Services.Processing;
+using Api.Services.Quartz.Base;
+using Api.Services.Quartz;
 
 namespace Api.Services
 {
@@ -23,6 +25,7 @@ namespace Api.Services
 			serviceCollection.AddBrockerService();
 			serviceCollection.AddHubs();
 			serviceCollection.AddProcessingServices();
+			serviceCollection.AddQuartz();
 		} 
 	}
 }

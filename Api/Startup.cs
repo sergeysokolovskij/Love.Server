@@ -81,12 +81,14 @@ namespace Api
 			services.AddRabbitMq(Configuration);
 
 			services.AddLocalization();
-
+		
 			services.AddHostedService<DevHostedService>();
 		}
 
-		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+		public void Configure(IApplicationBuilder app,
+			IWebHostEnvironment env)
 		{
+		
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();

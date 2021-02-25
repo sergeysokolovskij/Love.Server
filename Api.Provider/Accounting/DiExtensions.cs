@@ -9,7 +9,8 @@ namespace Api.Provider.Accounting
 	{
 		public static void RegisterAccounting(this IServiceCollection serviceCollection)
 		{
-			serviceCollection.AddTransient<IFlowProvider, FlowProvider>();
+			serviceCollection.AddScoped<IUserOnlineAccountingProvider, UserOnlineAccountingProvider>();
+			serviceCollection.AddScoped<IFlowProvider, FlowProvider>();
 		}
 	}
 }

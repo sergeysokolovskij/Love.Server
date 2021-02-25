@@ -26,5 +26,10 @@ namespace Api.Factories
 		{
 			return $"{userId}-{tokenId}";
 		}
+
+		public static string GenerateAesKeyCache(string userId)
+        {
+			return $"{userId}-aes";
+        }
 	}
 }

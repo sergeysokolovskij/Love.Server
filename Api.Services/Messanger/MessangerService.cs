@@ -145,6 +145,7 @@ namespace Api.Services.Messanger
         {
 			var model = JsonConvert.DeserializeObject<MessageDto>(message);
 			var savedMessage = await messageProvider.GetModelBySearchPredicate(x => x.MessageId == model.Message.MessageId);
+
 			if (savedMessage == null)
             {
 				// логируем ошибку

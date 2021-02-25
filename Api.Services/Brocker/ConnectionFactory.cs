@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Api.Services.Exceptions;
+using Microsoft.Extensions.Configuration;
 using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;

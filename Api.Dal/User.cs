@@ -25,6 +25,7 @@ namespace Api.DAL
 		public List<Session> Sessions { get; set; }
 		public List<Connection> Connections { get; set; }
 		public List<AccountingRecord> AccountingRecords { get; set; }
+		public List<UserOnlineAccounting> UserOnlineAccountings { get; set; }
 		public DateTime Created { get; set; }
 		public DateTime Updated { get; set; } = DateTime.Now;
 		public User()

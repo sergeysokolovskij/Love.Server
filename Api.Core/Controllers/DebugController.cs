@@ -1,4 +1,5 @@
-﻿using Api.Providers;
+﻿using Api.Core.Filters;
+using Api.Providers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using ShopPlatform.Controllers;
@@ -25,6 +26,8 @@ namespace Api.Core.Controllers
 			this.hostingEnvironment = hostingEnvironment;
 		}
 
+
+		[PhoneConfirmed4AcessFilter]
 		[HttpGet]
 		public IActionResult Debug()
 		{

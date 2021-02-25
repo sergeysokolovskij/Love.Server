@@ -41,7 +41,7 @@ namespace Api.Dal.Migrations
                         {
                             Id = 1L,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Secret = new byte[] { 49, 157, 120, 140, 134, 114, 58, 172, 207, 103, 208, 69, 140, 34, 88, 166, 174, 126, 96, 108, 123, 120, 171, 251, 118, 10, 185, 65, 182, 216, 137, 223 },
+                            Secret = new byte[] { 98, 146, 181, 59, 73, 92, 4, 220, 171, 173, 149, 111, 160, 119, 120, 51, 98, 98, 58, 6, 108, 251, 50, 12, 28, 80, 4, 183, 6, 85, 91, 95 },
                             Updated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -259,6 +259,31 @@ namespace Api.Dal.Migrations
                     b.HasIndex("ToId");
 
                     b.ToTable("Flows");
+                });
+
+            modelBuilder.Entity("Api.Dal.Accounting.UserOnlineAccounting", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<bool>("IsOnline")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime>("Updated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserOnlineAccountings");
                 });
 
             modelBuilder.Entity("Api.Dal.Auth.Session", b =>
@@ -490,7 +515,7 @@ namespace Api.Dal.Migrations
                         new
                         {
                             Id = "1",
-                            Created = new DateTime(2021, 2, 9, 16, 7, 53, 8, DateTimeKind.Local).AddTicks(894),
+                            Created = new DateTime(2021, 2, 20, 16, 29, 49, 855, DateTimeKind.Local).AddTicks(7320),
                             Login = "test1@mail.ru",
                             Password = "asddasSdas#112",
                             Updated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -498,7 +523,7 @@ namespace Api.Dal.Migrations
                         new
                         {
                             Id = "2",
-                            Created = new DateTime(2021, 2, 9, 16, 7, 53, 10, DateTimeKind.Local).AddTicks(5505),
+                            Created = new DateTime(2021, 2, 20, 16, 29, 49, 858, DateTimeKind.Local).AddTicks(7168),
                             Login = "test2@mail.ru",
                             Password = "asddasSdasdas#212",
                             Updated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -811,22 +836,22 @@ namespace Api.Dal.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "c8eb1887-ed36-4ba4-96c4-8f3afc874e90",
-                            ConcurrencyStamp = "94426880-b5c6-4bd4-b63c-af618752916f",
+                            Id = "6913b5af-ee01-475b-ba98-d8149cc37695",
+                            ConcurrencyStamp = "b0f7e657-9091-4667-97e1-e870be71d0bb",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "31e4e4e0-f043-4bc6-bb5e-792a672aa518",
-                            ConcurrencyStamp = "66b7d67c-b11d-486d-bd1e-79b19ee5d58f",
+                            Id = "a5345cad-1c29-45ac-9bce-ca63f64c0c43",
+                            ConcurrencyStamp = "1d2618eb-6448-4e27-9e7b-39b68b81a677",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "13c5feaf-295f-46fe-ada2-a90395d3c504",
-                            ConcurrencyStamp = "1f9a3efe-1882-4c48-bc4d-8fcb86c79222",
+                            Id = "f981d765-0c5a-4e46-b21e-861add8f553d",
+                            ConcurrencyStamp = "0ba85b72-0513-4291-9804-a850f073d6c3",
                             Name = "ProtocoledUsers",
                             NormalizedName = "PROTOCOLEDUSERS"
                         });
@@ -967,6 +992,13 @@ namespace Api.Dal.Migrations
                     b.HasOne("Api.Dal.Accounting.AccountingRecord", "To")
                         .WithMany()
                         .HasForeignKey("ToId");
+                });
+
+            modelBuilder.Entity("Api.Dal.Accounting.UserOnlineAccounting", b =>
+                {
+                    b.HasOne("Api.DAL.User", "User")
+                        .WithMany("UserOnlineAccountings")
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Api.Dal.Auth.Session", b =>

@@ -19,8 +19,4 @@
     <ProjectReference Include="..\Api.Provider\Api.Provider.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Metrics\" />
-  </ItemGroup>
-
 </Project>

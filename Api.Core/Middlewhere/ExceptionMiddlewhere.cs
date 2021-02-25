@@ -48,7 +48,7 @@ namespace ShopPlatforms.Core.Middlewhere
 			catch(Exception ex) 
 			{
 				logger.LogError(ex.Message);
-				Logger.ErrorLog(ex);
+				
 				context.Response.StatusCode = 500;
 				var error = ServerExceptions.ServerError(ex);
 

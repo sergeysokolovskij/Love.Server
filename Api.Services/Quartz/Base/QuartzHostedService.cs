@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Quartz;
 using Quartz.Spi;
 using System;
@@ -18,24 +19,28 @@ namespace Api.Services.Quartz.Base
 
     public class QuartzHostedService : IHostedService
     {
-        private readonly IJobFactory jobFactory;
+        private readonly IServiceProvider serviceProvider;
         private readonly IEnumerable<JobSchedule> jobSchedules;
-        private readonly ISchedulerFactory schedulerFactory;
+        private ISchedulerFactory schedulerFactory;
+        private IJobFactory jobFactory;
 
         public QuartzHostedService(
-            IJobFactory jobFactory,
-            ISchedulerFactory schedulerFactory,
+            IServiceProvider serviceProvider,
             IEnumerable<JobSchedule> jobSchedules)
         {
-            this.jobFactory = jobFactory;
+            this.serviceProvider = serviceProvider;
             this.jobSchedules = jobSchedules;
-            this.schedulerFactory = schedulerFactory;
         }
 
         public IScheduler Scheduler { get; set; }
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
+            
+            using var scope = serviceProvider.GetService<IServiceScopeFactory>().CreateScope();
+            jobFactory = scope.ServiceProvider.GetRequiredService<IJobFactory>();
+            schedulerFactory = scope.ServiceProvider.GetRequiredService<ISchedulerFactory>();
+
             Scheduler = await schedulerFactory.GetScheduler(cancellationToken);
             Scheduler.JobFactory = jobFactory;
 
@@ -63,7 +68,7 @@ namespace Api.Services.Quartz.Base
                 .WithDescription(jobType.Name)
                 .Build();
         }
-
+        
         private ITrigger CreateTrigger(JobSchedule schedule)
         {
             return TriggerBuilder.Create()

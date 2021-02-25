@@ -20,9 +20,11 @@ namespace Api.Core.Controllers
 		{
 		}
 
-		public async Task<IActionResult> AddPictureAsync()
+
+		[HttpGet]
+		public async Task<IActionResult> IsProfileSucessAsync()
         {
 			return Ok();
-        } 
+        }
 	}
 }

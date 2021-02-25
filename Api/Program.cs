@@ -40,6 +40,9 @@ namespace Api
 
 			host = hostBuilder.Build();
 
+			var logger = host.Services.GetRequiredService<ILoggerFactory>().CreateLogger<Program>();
+			logger.LogInformation("Try to run app...");
+
 			var scope = host.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
 
 			try
@@ -78,6 +81,8 @@ namespace Api
 
             var subscriber = scope.ServiceProvider.GetRequiredService<ISubscriber>();
 			await subscriber.SetAllSubscribersAsync();
+
+			logger.LogInformation("App runing sucess!");
 			await host.RunAsync();
 		}
 		public static IHostBuilder CreateHostBuilder(string[] args)
@@ -104,7 +109,7 @@ namespace Api
 				.ConfigureLogging((logger) => 
 				{
 					logger.AddConsole();
-					logger.SetMinimumLevel(LogLevel.Information);
+					logger.AddFile("logs/log.txt");
 					logger.AddFilter("Microsoft.AspNetCore.SignalR", LogLevel.Debug);
 					logger.AddFilter("Microsoft.AspNetCore.Http.Connections", LogLevel.Debug);
 				});

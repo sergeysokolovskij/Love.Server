@@ -28,8 +28,10 @@ namespace Api.Services.Brocker
         {
 			using (var connection = connectionsProvider.GetConnection().CreateModel())
             {
-                // создаем точки обмена
-				
+				// создаем точки обмена
+
+				logger.LogInformation("Try to create exchanges...");
+
 				connection.ExchangeDeclare("readedmessages", ExchangeType.Direct, true);
 				connection.ExchangeDeclare("useronline", ExchangeType.Direct, true);
 				connection.ExchangeDeclare("statistic", ExchangeType.Direct, true);

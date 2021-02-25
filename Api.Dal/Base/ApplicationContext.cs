@@ -65,6 +65,8 @@ namespace Api.DAL.Base
 		public DbSet<Flow> Flows { get; set; }
 		public DbSet<AccountingRecord> AccountingRecords { get; set; }
 
+		public DbSet<UserOnlineAccounting> UserOnlineAccountings { get; set; }
+
 		#endregion
 		#endregion
 

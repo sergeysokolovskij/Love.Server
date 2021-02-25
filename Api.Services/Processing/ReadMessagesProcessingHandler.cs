@@ -43,7 +43,7 @@ namespace Api.Services.Processing
                 });
                 connection.QueueBind(routingKey, "readedmessages", "");
             }
-           
+
             var subscriber = new AsyncEventingBasicConsumer(connection);
 
             subscriber.Received += async (conn, ea) =>

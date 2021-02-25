@@ -34,9 +34,14 @@ namespace Api.Providers
 		}
 
 
-		public virtual Task<T> CreateOrUpdateAsync(T item)
+		public async virtual Task<T> CreateOrUpdateAsync(T item)
 		{
-			throw new NotImplementedException("Method has to be overrride");
+			item.Created = DateTime.Now;
+
+			dbSet.Add(item);
+			await db.SaveChangesAsync();
+
+			return item;
 		}
 
 		public virtual Task<T> GetModelBySearchPredicate(Expression<Func<T, bool>> predicate)

@@ -171,14 +171,5 @@ namespace Api.Core.Controllers
 		{
 			return Ok();
 		}
-
-
-
-		[HttpGet("test")]
-		[Authorize(Roles ="ProtocoledUser")]
-		public async Task<IActionResult> Test()
-		{
-			return Ok();
-		}
 	}
 }

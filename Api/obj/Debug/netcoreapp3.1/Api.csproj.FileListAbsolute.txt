@@ -432,3 +432,10 @@ D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.cspr
 D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.dll
 D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.pdb
 D:\Рабочий стол\love\Love.Server\Api\obj\Debug\netcoreapp3.1\Api.genruntimeconfig.cache
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Serilog.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.File.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Serilog.Sinks.Async.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+D:\Рабочий стол\love\Love.Server\Api\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
